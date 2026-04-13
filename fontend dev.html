@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Todo Card</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.status {
+  background: linear-gradient(135deg, #60a5fa, #6366f1);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+/* Description */
+.desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* Priority */
+.priority {
+  display: inline-block;
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Dates */
+.date {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.remaining {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/* Tags */
+.tags {
+  margin-bottom: 18px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  margin: 4px 6px 0 0;
+  font-weight: 700;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e5e7eb;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Stack buttons on small screens */
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+/* Edit (Purple) */
+.edit {
+  background: linear-gradient(135deg, #c084fc, #9333ea);
+  color: #fff;
+}
+
+/* Delete (RED 🔥) */
+.delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+  <div class="header">
+    <div class="checkbox">
+      <input type="checkbox">
+      <span>Mark as complete</span>
+    </div>
+    <div class="status">Pending</div>
+  </div>
+
+  <div class="title"> Finish Frontend Task</div>
+
+  <div class="desc">
+    Build a clean and accessible todo card with proper test IDs and
+    real-time countdown updates.
+  </div>
+
+  <div class="priority"> High Priority</div>
+
+  <div class="date"> Due April 16, 2026</div>
+  <div class="remaining"> Due in 3 days</div>
+
+  <div class="tags">
+    <span class="tag">💼 Work</span>
+    <span class="tag">⚡ Urgent</span>
+    <span class="tag">🎨 Design</span>
+  </div>
+
+  <div class="actions">
+    <button class="edit">✏️ Edit</button>
+    <button class="delete">🗑 Delete</button>
+  </div>
+
+</div>
+
+</body>
+</html>
